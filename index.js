@@ -3,7 +3,7 @@ const db = require("./config/connection")
 
 require("console.table")
 
-db.connect( ()=>{
+db.connect(()=>{
     menu()
 })
 /*
@@ -40,7 +40,7 @@ function menu(){
     
 }
 function viewDepartments(){
-    db.query("select* from department", (err, data)=>{
+    db.query("select * from department", (err, data)=>{
         console.table(data)
         menu()
     })
